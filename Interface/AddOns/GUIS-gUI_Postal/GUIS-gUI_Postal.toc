@@ -1,0 +1,18 @@
+﻿## Interface: 40300
+## Name: GUIS-gUI_Postal
+## Title: |cFF4488FFGUIS:|r |cFFFF7D0Ag|r|cFFFFBB00UI|r|cFFFFFFFF|r - Postal Skin
+## Notes: Skins Postal in the style of |cFF4488FFGUIS:|r |cFFFF7D0Ag|r|cFFFFBB00UI|r|cFFFFFFFF|r
+## Author: Lars Norberg
+## Version: 2.1
+## DefaultState: Enabled
+## SavedVariablesPerCharacter: GUIS_POSTAL_DB
+## RequiredDeps: GUIS-gUI, Postal
+## X-eMail: goldpaw@friendlydruid.com
+## X-Website: http://www.friendlydruid.com
+## X-Curse-Packaged-Version: 2.1.8
+## X-Curse-Project-Name: gUI™ - Postal Skin
+## X-Curse-Project-ID: gui-postal-skin
+## X-Curse-Repository-ID: wow/gui-postal-skin/mainline
+
+GUIS-gUI_Postal.lua
+

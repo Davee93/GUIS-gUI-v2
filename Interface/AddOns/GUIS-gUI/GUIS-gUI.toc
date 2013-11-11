@@ -1,0 +1,22 @@
+﻿## Interface: 40300
+## Name: GUIS-gUI
+## Title: |cFFFF7D0Ag|r|cFFFFBB00UI|r|cFFFFFFFF™|r |cFFFFFFFF2.0|r |cFF4488FFfor Cata|r
+## Notes: |cFFFFFFFFMinimalistic UI replacement.|r|n|cFFFFFFFFSpecial credits to:|r|n|cFF4488FFRogueh(frFR), Banz Lin(enCN, enTW, zhCN, zhTW), UnoPrata(ptBR) and Kkthnxbye(compability)|r
+## Author: Lars Norberg, Modified by Kkthnxbye
+## Version: 2.0
+## DefaultState: Enabled
+## SavedVariables: GUIS_SAVED_FRAME_POSITIONS
+## SavedVariablesPerCharacter: GUIS_VERSION, GUIS_DB
+## OptionalDeps: Bartender, Bartender4, ArkInventory, Bagnon, cargBags_Nivaya, cargBags_Simplicity, Chatter, Prat-3.0, Grid, Grid2, PitBull4, ShadowedUnitFrames, XPerl, DocsUI_Nameplates, Headline, knameplates, mNameplates, TidyPlates, !BugGrabber, BugSack, Skinner, Aurora, VuhDo, MikScrollingBattleText, AuctionLite, RazerNaga, AuctionProfitMaster, DBM-Core, Combuctor, TBag, OneBag3, OneBank3, Macaroon, Fonter, Fontifier, Mapster, Aloft, StarTip, TinyTip, TipTac, ag_UnitFrames, Carbonite, Baggins, BaudBag, Healbot, SexyMap, famBags, CLCRet, ArenaUnitFrames, Gladius, AdiBags, CompactRaid, ButtonFacade, ElkBuffBars, SatrinaBuffFrame, OptionHouse, Pawn, Healium
+## X-eMail: goldpaw@friendlydruid.com
+## X-Website: http://www.friendlydruid.com
+## X-Curse-Packaged-Version: v2.0.340
+## X-Curse-Project-Name: gUI™ v2.0 for Cata
+## X-Curse-Project-ID: guis-gui
+## X-Curse-Repository-ID: wow/guis-gui/mainline
+## X-Curse-Packaged-Version: v2.0.342
+## X-Curse-Project-Name: gUI v2.0 for Cata
+## X-Curse-Project-ID: guis-gui
+## X-Curse-Repository-ID: wow/guis-gui/mainline
+
+GUIS-gUI.xml

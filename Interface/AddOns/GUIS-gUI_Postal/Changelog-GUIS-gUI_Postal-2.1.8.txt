@@ -1,0 +1,8 @@
+2012-05-14  Goldpaw  <Goldpaw>
+
+[143cdcb23a07] [2.1.8]
+* GUIS-gUI_Postal.lua, GUIS-gUI_Postal.toc:
+
+- updated to work with gUI v2
+
+

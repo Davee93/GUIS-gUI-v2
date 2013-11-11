@@ -1,0 +1,16 @@
+## Interface: 40100
+## Author: p3lim, Thalyra
+## Version: 40200.1
+## Title: oUF Swing
+## Notes: Swing timer plug-in for oUF
+## RequiredDeps: oUF
+## X-Curse-Packaged-Version: v2.0.340
+## X-Curse-Project-Name: gUI™ v2.0 for Cata
+## X-Curse-Project-ID: guis-gui
+## X-Curse-Repository-ID: wow/guis-gui/mainline
+## X-Curse-Packaged-Version: v2.0.342
+## X-Curse-Project-Name: gUI v2.0 for Cata
+## X-Curse-Project-ID: guis-gui
+## X-Curse-Repository-ID: wow/guis-gui/mainline
+
+oUF_Swing.lua

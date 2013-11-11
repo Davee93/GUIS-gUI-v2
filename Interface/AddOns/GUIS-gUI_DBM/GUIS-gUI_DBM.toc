@@ -1,0 +1,10 @@
+## Interface: 40300
+## Title: |cFF4488FFGUIS:|r |cFFFF7D0Ag|r|cFFFFBB00UI|r|cFFFFFFFF|r - DBM Skin
+## Notes: Skins DBM in the style of |cFF4488FFGUIS:|r |cFFFF7D0Ag|r|cFFFFBB00UI|r|cFFFFFFFF|r
+## Author: Kkthnxbye
+## Version: 1.2
+## DefaultState: Enabled
+## RequiredDeps: GUIS-gUI, DBM-Core
+
+DBT-Template.xml
+GUIS-gUI_DBM.lua

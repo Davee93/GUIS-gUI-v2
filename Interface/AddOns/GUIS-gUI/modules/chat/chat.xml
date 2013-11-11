@@ -1,0 +1,23 @@
+﻿<Ui xmlns="http://www.blizzard.com/wow/ui/"
+ xmlGUIS:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ..\FrameXML\UI.xsd">
+	
+	<!-- main module -->
+	<Script file="chat.lua" />
+
+	<!-- autosetup -->
+	<Script file="easyChat.lua" />
+
+	<!-- functionality -->
+	<Script file="copyURL.lua" />
+	<Script file="realIDlinks.lua" />
+	<Script file="tellTarget.lua" />
+
+	<!-- filters, icons, replacements -->
+	<Script file="chatAbbreviations.lua" />
+	<Script file="chatFilters.lua" />
+	<Script file="chatIcons.lua" />
+	
+	<!-- on-screen chat bubbles -->
+	<Script file="chatBubbles.lua" />
+</Ui>

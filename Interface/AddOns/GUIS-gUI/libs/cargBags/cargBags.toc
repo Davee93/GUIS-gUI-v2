@@ -1,0 +1,26 @@
+## Interface: 40000
+## Title: cargBags
+## Author: Cargor
+## Version: 2.1.2
+## X-eMail: me@xconstruct.net
+## X-Website: http://xconstruct.net
+## X-cargBags: cargBags
+## X-License: GPL 2
+## Notes: Inventory framework
+## X-Curse-Packaged-Version: v2.0.340
+## X-Curse-Project-Name: gUI™ v2.0 for Cata
+## X-Curse-Project-ID: guis-gui
+## X-Curse-Repository-ID: wow/guis-gui/mainline
+## X-Curse-Packaged-Version: v2.0.342
+## X-Curse-Project-Name: gUI v2.0 for Cata
+## X-Curse-Project-ID: guis-gui
+## X-Curse-Repository-ID: wow/guis-gui/mainline
+
+## For embedding purposes
+embed.xml
+
+## Test implementations
+## Normally these should be commented
+# tests\basic.lua
+# tests\minimal.lua
+# tests\list.lua

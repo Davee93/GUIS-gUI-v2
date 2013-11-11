@@ -1,0 +1,408 @@
+﻿<Ui xmlns="http://www.blizzard.com/wow/ui/"
+ xmlGUIS:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ..\FrameXML\UI.xsd">
+ 
+	<!-- PT Sans Narrow Bold -->
+	<!-- Waukegan LDO -->
+	<!-- RighteousKill-Condensed -->
+	<!-- TrashHand -->
+
+	<!-- Panels -->
+	<Font name="GUIS_PanelFont" font="Interface\AddOns\GUIS-gUI\media\fonts\PT Sans Narrow Bold.ttf" justifyH="LEFT" outline="NORMAL" virtual="true">
+		<Color r="1.0" g="0.82" b="0"/>
+		<Shadow>
+			<Offset>
+				<AbsDimension x="1" y="-1"/>
+			</Offset>
+			<Color r="0" g="0" b="0" a="1"/>
+		</Shadow>
+		<FontHeight>
+			<AbsValue val="12"/>
+		</FontHeight>
+	</Font>
+
+	<!-- System (tabs, etc) -->
+	<Font name="GUIS_SystemFontNormal" font="Interface\AddOns\GUIS-gUI\media\fonts\PT Sans Narrow Bold.ttf" justifyH="LEFT" outline="NORMAL" virtual="true">
+		<Color r="1.0" g="0.82" b="0"/>
+		<Shadow>
+			<Offset>
+				<AbsDimension x="1" y="-1"/>
+			</Offset>
+			<Color r="0" g="0" b="0" a="1"/>
+		</Shadow>
+		<FontHeight>
+			<AbsValue val="14"/>
+		</FontHeight>
+	</Font>
+	<Font name="GUIS_SystemFontNormalWhite" inherits="GUIS_SystemFontNormal" virtual="true">
+		<Color r="1" g="1" b="1" />
+	</Font>
+	<Font name="GUIS_SystemFontDisabled" inherits="GUIS_SystemFontNormal" virtual="true">
+		<Color r="0.75" g="0.75" b="0.75"/>
+	</Font>
+	<Font name="GUIS_SystemFontHighlight" inherits="GUIS_SystemFontNormal" virtual="true">
+		<Color r="1" g="1" b="1" />
+	</Font>
+	<Font name="GUIS_SystemFontSmall" font="Interface\AddOns\GUIS-gUI\media\fonts\PT Sans Narrow Bold.ttf" justifyH="LEFT" outline="NORMAL" virtual="true">
+		<Color r="1.0" g="0.82" b="0"/>
+		<Shadow>
+			<Offset>
+				<AbsDimension x="1" y="-1"/>
+			</Offset>
+			<Color r="0" g="0" b="0" a="1"/>
+		</Shadow>
+		<FontHeight>
+			<AbsValue val="12"/>
+		</FontHeight>
+	</Font>
+	<Font name="GUIS_SystemFontSmallWhite" inherits="GUIS_SystemFontSmall" virtual="true">
+		<Color r="1" g="1" b="1" />
+	</Font>
+	<Font name="GUIS_SystemFontSmallDisabled" inherits="GUIS_SystemFontSmall" virtual="true">
+		<Color r="0.75" g="0.75" b="0.75"/>
+	</Font>
+	<Font name="GUIS_SystemFontSmallHighlight" inherits="GUIS_SystemFontSmall" virtual="true">
+		<Color r="1" g="1" b="1" />
+	</Font>
+	<Font name="GUIS_SystemFontSmallGray" inherits="GUIS_SystemFontSmall" virtual="true">
+		<Color r="0.75" g="0.75" b="0.75"/>
+	</Font>
+	<Font name="GUIS_SystemFontTiny" font="Interface\AddOns\GUIS-gUI\media\fonts\PT Sans Narrow Bold.ttf" justifyH="LEFT" outline="NORMAL" virtual="true">
+		<Color r="1.0" g="0.82" b="0"/>
+		<Shadow>
+			<Offset>
+				<AbsDimension x="1" y="-1"/>
+			</Offset>
+			<Color r="0" g="0" b="0" a="1"/>
+		</Shadow>
+		<FontHeight>
+			<AbsValue val="10"/>
+		</FontHeight>
+	</Font>
+	<Font name="GUIS_SystemFontTinyWhite" inherits="GUIS_SystemFontTiny" virtual="true">
+		<Color r="1" g="1" b="1" />
+	</Font>
+	<Font name="GUIS_SystemFontLarge" font="Interface\AddOns\GUIS-gUI\media\fonts\PT Sans Narrow Bold.ttf" justifyH="LEFT" outline="NORMAL" virtual="true">
+		<Color r="1.0" g="0.82" b="0"/>
+		<Shadow>
+			<Offset>
+				<AbsDimension x="1" y="-1"/>
+			</Offset>
+			<Color r="0" g="0" b="0" a="1"/>
+		</Shadow>
+		<FontHeight>
+			<AbsValue val="16"/>
+		</FontHeight>
+	</Font>
+	<Font name="GUIS_SystemFontVeryLarge" font="Interface\AddOns\GUIS-gUI\media\fonts\PT Sans Narrow Bold.ttf" justifyH="LEFT" outline="NORMAL" virtual="true">
+		<Color r="1.0" g="0.82" b="0"/>
+		<Shadow>
+			<Offset>
+				<AbsDimension x="1" y="-1"/>
+			</Offset>
+			<Color r="0" g="0" b="0" a="1"/>
+		</Shadow>
+		<FontHeight>
+			<AbsValue val="18"/>
+		</FontHeight>
+	</Font>
+	
+	<!-- itembuttons -->
+	<Font name="GUIS_ItemButtonHotKeyFont" font="Interface\AddOns\GUIS-gUI\media\fonts\BigNoodleTitling.ttf" justifyH="LEFT" outline="NORMAL" virtual="true">
+		<Color r="1.0" g="0.82" b="0"/>
+		<Shadow>
+			<Offset>
+				<AbsDimension x="1" y="-1"/>
+			</Offset>
+			<Color r="0" g="0" b="0" a="1"/>
+		</Shadow>
+		<FontHeight>
+			<AbsValue val="10"/>
+		</FontHeight>
+	</Font>
+	<Font name="GUIS_ItemButtonNameFontMedium" font="Interface\AddOns\GUIS-gUI\media\fonts\BigNoodleTitling.ttf" justifyH="LEFT" outline="NORMAL" virtual="true">
+		<Color r="1.0" g="0.82" b="0"/>
+		<Shadow>
+			<Offset>
+				<AbsDimension x="1" y="-1"/>
+			</Offset>
+			<Color r="0" g="0" b="0" a="1"/>
+		</Shadow>
+		<FontHeight>
+			<AbsValue val="12"/>
+		</FontHeight>
+	</Font>
+	<Font name="GUIS_ItemButtonNameFont" font="Interface\AddOns\GUIS-gUI\media\fonts\BigNoodleTitling.ttf" justifyH="LEFT" outline="NORMAL" virtual="true">
+		<Color r="1.0" g="0.82" b="0"/>
+		<Shadow>
+			<Offset>
+				<AbsDimension x="1" y="-1"/>
+			</Offset>
+			<Color r="0" g="0" b="0" a="1"/>
+		</Shadow>
+		<FontHeight>
+			<AbsValue val="8"/>
+		</FontHeight>
+	</Font>
+
+	<!-- Tooltips -->
+	<Font name="GUIS_TooltipFontNormal" font="Interface\AddOns\GUIS-gUI\media\fonts\PT Sans Narrow Bold.ttf" justifyH="LEFT" outline="NORMAL" virtual="true">
+		<Color r="1.0" g="0.82" b="0"/>
+		<Shadow>
+			<Offset>
+				<AbsDimension x="1" y="-1"/>
+			</Offset>
+			<Color r="0" g="0" b="0" a="1"/>
+		</Shadow>
+		<FontHeight>
+			<AbsValue val="12"/>
+		</FontHeight>
+	</Font>
+	<Font name="GUIS_TooltipFontTitle" font="Interface\AddOns\GUIS-gUI\media\fonts\PT Sans Narrow Bold.ttf" justifyH="LEFT" outline="NORMAL" virtual="true">
+		<Color r="1.0" g="1" b="1"/>
+		<Shadow>
+			<Offset>
+				<AbsDimension x="1" y="-1"/>
+			</Offset>
+			<Color r="0" g="0" b="0" a="1"/>
+		</Shadow>
+		<FontHeight>
+			<AbsValue val="14"/>
+		</FontHeight>
+	</Font>
+	<Font name="GUIS_TooltipFontSmall" font="Interface\AddOns\GUIS-gUI\media\fonts\PT Sans Narrow Bold.ttf" justifyH="LEFT" outline="NORMAL" virtual="true">
+		<Color r="1.0" g="0.82" b="0"/>
+		<Shadow>
+			<Offset>
+				<AbsDimension x="1" y="-1"/>
+			</Offset>
+			<Color r="0" g="0" b="0" a="1"/>
+		</Shadow>
+		<FontHeight>
+			<AbsValue val="10"/>
+		</FontHeight>
+	</Font>
+	<Font name="GUIS_TooltipFontSmallWhite" inherits="GUIS_TooltipFontSmall" virtual="true">
+		<Color r="1" g="1" b="1" />
+	</Font>
+
+	<!-- Chat -->
+	<Font name="GUIS_ChatFontNormal" font="Interface\AddOns\GUIS-gUI\media\fonts\PT Sans Narrow Bold.ttf" justifyH="LEFT" outline="NORMAL" virtual="true">
+		<Color r="1" g="1" b="1" />
+		<Shadow>
+			<Offset>
+				<AbsDimension x="1" y="-1"/>
+			</Offset>
+			<Color r="0" g="0" b="0" a="1"/>
+		</Shadow>
+		<FontHeight>
+			<AbsValue val="14"/>
+		</FontHeight>
+	</Font>
+	<Font name="GUIS_ChatFontNormalSmall" font="Interface\AddOns\GUIS-gUI\media\fonts\PT Sans Narrow Bold.ttf" justifyH="LEFT" outline="NORMAL" virtual="true">
+		<Color r="1" g="1" b="1" />
+		<Shadow>
+			<Offset>
+				<AbsDimension x="1" y="-1"/>
+			</Offset>
+			<Color r="0" g="0" b="0" a="1"/>
+		</Shadow>
+		<FontHeight>
+			<AbsValue val="12"/>
+		</FontHeight>
+	</Font>
+
+	<!-- Numbers -->
+	<Font name="GUIS_NumberFontNormal" font="Interface\AddOns\GUIS-gUI\media\fonts\BigNoodleTitling.ttf" justifyH="LEFT" outline="NORMAL" virtual="true">
+		<Color r="1" g="1" b="1" />
+		<Shadow>
+			<Offset>
+				<AbsDimension x="1" y="-1"/>
+			</Offset>
+			<Color r="0" g="0" b="0" a="1"/>
+		</Shadow>
+		<FontHeight>
+			<AbsValue val="14"/>
+		</FontHeight>
+	</Font>
+	<Font name="GUIS_NumberFontNormalRight" font="Interface\AddOns\GUIS-gUI\media\fonts\BigNoodleTitling.ttf" justifyH="RIGHT" outline="NORMAL" virtual="true">
+		<Color r="1" g="1" b="1" />
+		<Shadow>
+			<Offset>
+				<AbsDimension x="1" y="-1"/>
+			</Offset>
+			<Color r="0" g="0" b="0" a="1"/>
+		</Shadow>
+		<FontHeight>
+			<AbsValue val="14"/>
+		</FontHeight>
+	</Font>
+	<Font name="GUIS_NumberFontNormalYellow" inherits="GUIS_NumberFontNormal" virtual="true">
+		<Color r="1" g="0.82" b="0" />
+	</Font>
+	<Font name="GUIS_NumberFontSmall" font="Interface\AddOns\GUIS-gUI\media\fonts\BigNoodleTitling.ttf" justifyH="LEFT" outline="NORMAL" virtual="true">
+		<Color r="1" g="1" b="1" />
+		<Shadow>
+			<Offset>
+				<AbsDimension x="1" y="-1"/>
+			</Offset>
+			<Color r="0" g="0" b="0" a="1"/>
+		</Shadow>
+		<FontHeight>
+			<AbsValue val="12"/>
+		</FontHeight>
+	</Font>
+	<Font name="GUIS_NumberFontSmallYellow" inherits="GUIS_NumberFontSmall" virtual="true">
+		<Color r="1" g="0.82" b="0" />
+	</Font>
+	
+	<Font name="GUIS_NumberFontTiny" font="Interface\AddOns\GUIS-gUI\media\fonts\BigNoodleTitling.ttf" justifyH="LEFT" outline="NORMAL" virtual="true">
+		<Color r="1" g="1" b="1" />
+		<Shadow>
+			<Offset>
+				<AbsDimension x="1" y="-1"/>
+			</Offset>
+			<Color r="0" g="0" b="0" a="1"/>
+		</Shadow>
+		<FontHeight>
+			<AbsValue val="10"/>
+		</FontHeight>
+	</Font>
+	<Font name="GUIS_NumberFontLarge" font="Interface\AddOns\GUIS-gUI\media\fonts\BigNoodleTitling.ttf" justifyH="LEFT" outline="NORMAL" virtual="true">
+		<Color r="1" g="1" b="1" />
+		<Shadow>
+			<Offset>
+				<AbsDimension x="1" y="-1"/>
+			</Offset>
+			<Color r="0" g="0" b="0" a="1"/>
+		</Shadow>
+		<FontHeight>
+			<AbsValue val="18"/>
+		</FontHeight>
+	</Font>
+	<Font name="GUIS_NumberFontHuge" font="Interface\AddOns\GUIS-gUI\media\fonts\BigNoodleTitling.ttf" outline="NORMAL" virtual="true">
+		<Color r="1" g="1" b="1" />
+		<Shadow>
+			<Offset>
+				<AbsDimension x="1" y="-1"/>
+			</Offset>
+			<Color r="0" g="0" b="0" a="1"/>
+		</Shadow>
+		<FontHeight>
+			<AbsValue val="22"/>
+		</FontHeight>
+	</Font>
+
+	<!-- CombatText -->
+	<Font name="GUIS_CombatTextFont" font="Interface\AddOns\GUIS-gUI\media\fonts\TrashHand.TTF" justifyH="LEFT" outline="NORMAL" virtual="true">
+		<Color r="1" g="1" b="1" />
+		<Shadow>
+			<Offset>
+				<AbsDimension x="2" y="-2"/>
+			</Offset>
+			<Color r="0" g="0" b="0" a="1"/>
+		</Shadow>
+		<FontHeight>
+			<AbsValue val="32"/>
+		</FontHeight>
+	</Font>
+
+	<!-- UnitFrames -->
+	<Font name="GUIS_UnitFrameNameNormal" font="Interface\AddOns\GUIS-gUI\media\fonts\BigNoodleTitling.ttf" justifyH="LEFT" outline="NORMAL" virtual="true">
+		<Color r="1" g="1" b="1" />
+		<Shadow>
+			<Offset>
+				<AbsDimension x="1" y="-1"/>
+			</Offset>
+			<Color r="0" g="0" b="0" a="1"/>
+		</Shadow>
+		<FontHeight>
+			<AbsValue val="14"/>
+		</FontHeight>
+	</Font>
+	<Font name="GUIS_UnitFrameNameTiny" font="Interface\AddOns\GUIS-gUI\media\fonts\BigNoodleTitling.ttf" justifyH="LEFT" outline="NORMAL" virtual="true">
+		<Color r="1" g="1" b="1" />
+		<Shadow>
+			<Offset>
+				<AbsDimension x="1" y="-1"/>
+			</Offset>
+			<Color r="0" g="0" b="0" a="1"/>
+		</Shadow>
+		<FontHeight>
+			<AbsValue val="10"/>
+		</FontHeight>
+	</Font>
+	<Font name="GUIS_UnitFrameNameSmall" font="Interface\AddOns\GUIS-gUI\media\fonts\BigNoodleTitling.ttf" justifyH="LEFT" outline="NORMAL" virtual="true">
+		<Color r="1" g="1" b="1" />
+		<Shadow>
+			<Offset>
+				<AbsDimension x="1" y="-1"/>
+			</Offset>
+			<Color r="0" g="0" b="0" a="1"/>
+		</Shadow>
+		<FontHeight>
+			<AbsValue val="12"/>
+		</FontHeight>
+	</Font>
+	<Font name="GUIS_UnitFrameNameHuge" font="Interface\AddOns\GUIS-gUI\media\fonts\BigNoodleTitling.ttf" justifyH="LEFT" outline="NORMAL" virtual="true">
+		<Color r="1" g="1" b="1" />
+		<Shadow>
+			<Offset>
+				<AbsDimension x="1" y="-1"/>
+			</Offset>
+			<Color r="0" g="0" b="0" a="1"/>
+		</Shadow>
+		<FontHeight>
+			<AbsValue val="20"/>
+		</FontHeight>
+	</Font>
+
+	<Font name="GUIS_UnitFrameNumberNormal" font="Interface\AddOns\GUIS-gUI\media\fonts\BigNoodleTitling.ttf" justifyH="LEFT" outline="NORMAL" virtual="true">
+		<Color r="1" g="1" b="1" />
+		<Shadow>
+			<Offset>
+				<AbsDimension x="1" y="-1"/>
+			</Offset>
+			<Color r="0" g="0" b="0" a="1"/>
+		</Shadow>
+		<FontHeight>
+			<AbsValue val="14"/>
+		</FontHeight>
+	</Font>
+	<Font name="GUIS_UnitFrameNumberTiny" font="Interface\AddOns\GUIS-gUI\media\fonts\BigNoodleTitling.ttf" justifyH="LEFT" outline="NORMAL" virtual="true">
+		<Color r="1" g="1" b="1" />
+		<Shadow>
+			<Offset>
+				<AbsDimension x="1" y="-1"/>
+			</Offset>
+			<Color r="0" g="0" b="0" a="1"/>
+		</Shadow>
+		<FontHeight>
+			<AbsValue val="10"/>
+		</FontHeight>
+	</Font>
+	<Font name="GUIS_UnitFrameNumberSmall" font="Interface\AddOns\GUIS-gUI\media\fonts\BigNoodleTitling.ttf" justifyH="LEFT" outline="NORMAL" virtual="true">
+		<Color r="1" g="1" b="1" />
+		<Shadow>
+			<Offset>
+				<AbsDimension x="1" y="-1"/>
+			</Offset>
+			<Color r="0" g="0" b="0" a="1"/>
+		</Shadow>
+		<FontHeight>
+			<AbsValue val="12"/>
+		</FontHeight>
+	</Font>
+	<Font name="GUIS_UnitFrameNumberHuge" font="Interface\AddOns\GUIS-gUI\media\fonts\BigNoodleTitling.ttf" justifyH="LEFT" outline="NORMAL" virtual="true">
+		<Color r="1" g="1" b="1" />
+		<Shadow>
+			<Offset>
+				<AbsDimension x="1" y="-1"/>
+			</Offset>
+			<Color r="0" g="0" b="0" a="1"/>
+		</Shadow>
+		<FontHeight>
+			<AbsValue val="20"/>
+		</FontHeight>
+	</Font>
+</Ui>

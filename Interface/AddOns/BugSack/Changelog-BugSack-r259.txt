@@ -1,0 +1,26 @@
+------------------------------------------------------------------------
+r259 | rabbit | 2012-03-04 18:07:42 +0000 (Sun, 04 Mar 2012) | 1 line
+Changed paths:
+   M /trunk/locales.lua
+
+Add ptBR from the wowace localization system.
+------------------------------------------------------------------------
+r258 | rabbit | 2012-03-04 17:32:02 +0000 (Sun, 04 Mar 2012) | 1 line
+Changed paths:
+   M /trunk/BugSack.toc
+
+Bump TOC.
+------------------------------------------------------------------------
+r257 | rabbit | 2012-03-04 01:44:53 +0000 (Sun, 04 Mar 2012) | 1 line
+Changed paths:
+   M /trunk/config.lua
+   M /trunk/core.lua
+
+Show the Mute option even if LSM is present because sometimes it's easier to click a checkbox than to find the 'None' sound in the dropdown.
+------------------------------------------------------------------------
+r256 | Zidomo | 2011-11-30 16:04:42 +0000 (Wed, 30 Nov 2011) | 1 line
+Changed paths:
+   M /trunk/BugSack.toc
+
+TOC bump...not for the whiners, but so that the embeds vers packages the latest AceSerializer-3.0 that's fixed (from October) for WoW 4.3.
+------------------------------------------------------------------------

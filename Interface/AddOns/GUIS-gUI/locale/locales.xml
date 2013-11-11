@@ -1,0 +1,23 @@
+﻿<Ui xmlns="http://www.blizzard.com/wow/ui/"
+ xmlGUIS:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ..\FrameXML\UI.xsd">
+	
+	<!-- Interface\FrameXML\VideoOptionsPanels.lua: LanguageRegions[<region>] = index -->
+
+	<!-- also applies to enGB, this is the default locale  -->
+	<Script file="enUS\enUS.lua" /> <!-- 2,1 -->
+
+	<Script file="deDE\deDE.lua" /> <!-- 0 -->
+	<Script file="esES\esES.lua" /> <!-- 3 -->
+	<Script file="frFR\frFR.lua" /> <!-- 4 -->
+	<Script file="koKR\koKR.lua" /> <!-- 5 -->
+	<Script file="zhCN\zhCN.lua" /> <!-- 6 -->
+	<Script file="zhTW\zhTW.lua" /> <!-- 7 -->
+	<Script file="enTW\enCN.lua" /> <!-- 8 -->
+	<Script file="enTW\enTW.lua" /> <!-- 9 -->
+	<Script file="esMX\esMX.lua" /> <!-- 10 -->
+	<Script file="ruRU\ruRU.lua" /> <!-- 11 -->
+	<Script file="ptBR\ptBR.lua" /> <!-- 12 -->
+	<Script file="ptPT\ptPT.lua" /> <!-- 13 -->
+
+</Ui>

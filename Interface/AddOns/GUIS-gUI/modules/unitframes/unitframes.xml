@@ -1,0 +1,28 @@
+﻿<Ui xmlns="http://www.blizzard.com/wow/ui/"
+ xmlGUIS:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ..\FrameXML\UI.xsd">
+
+	<Script file="plugins\oUF_boring_totembar\main.lua" />
+	<Script file="plugins\oUF_CombatFeedback\oUF_CombatFeedback.lua" />
+	<Script file="plugins\oUF_RaidDebuffs\oUF_RaidDebuffs.lua" />
+	<Script file="plugins\oUF_Smooth\oUF_Smooth.lua" />
+	<Script file="plugins\oUF_SpellRange\oUF_SpellRange.lua" />
+	<Script file="plugins\oUF_Swing\oUF_Swing.lua" />
+	<Script file="plugins\oUF_Trinkets\oUF_Trinkets.lua" />
+
+	<Script file="shared\tags.lua" />
+	<Script file="shared\shared.lua" />
+
+	<Script file="shared\aurafilter.lua" />
+	<Script file="shared\aurawatch.lua" />
+	<Script file="shared\debuffs.lua" />
+	<Script file="shared\panel.lua" />
+
+	<Script file="frames\frames.lua" />
+	<Script file="frames\classbar.lua" />
+	<Script file="party\party.lua" />
+	<Script file="raid\raid.lua" />
+	<Script file="arena\arena.lua" />
+	<Script file="boss\boss.lua" />
+	<Script file="maintank\maintank.lua" />
+</Ui>

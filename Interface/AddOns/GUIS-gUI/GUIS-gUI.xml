@@ -1,0 +1,80 @@
+﻿<Ui xmlns="http://www.blizzard.com/wow/ui/"
+ xmlGUIS:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ..\FrameXML\UI.xsd">
+ 
+	<!-- 
+		Don't mess with the order of things in this file!
+	-->
+
+	<Script file="libs\LibStub\LibStub.lua"/>
+
+	<!-- libraries with no dependencies -->
+	<Include file="libs\gCore-3.0\gCore-3.0.xml" />
+	<Include file="libs\gDB-1.0\gDB-1.0.xml" />
+	<Include file="libs\gFrameHandler-1.0\gFrameHandler-1.0.xml" />
+	<Include file="libs\gLocale-1.0\gLocale-1.0.xml" />
+	<Include file="libs\gMedia-3.0\gMedia-3.0.xml" />
+	<Include file="libs\gString-1.0\gString-1.0.xml" />
+
+	<!-- libraries depending on one or more of the above -->
+	<Include file="libs\gPanel-2.0\gPanel-2.0.xml" /> 
+	<Include file="libs\gActionBars-2.0\gActionBars-2.0.xml" />
+	<Include file="libs\gActionButtons-2.0\gActionButtons-2.0.xml" /> 
+	<Include file="libs\gTimerLib-1.0\gTimerLib-1.0.xml" /> 
+	
+	<!-- external libraries -->
+	<Include file="libs\CallbackHandler-1.0\CallbackHandler-1.0.xml" />
+	<Include file="libs\LibKeyBound-1.0\LibKeyBound-1.0\lib.xml" />
+	<Include file="libs\cargBags\embed.xml" />
+	<Include file="libs\oUF\oUF.xml" />
+
+	<!-- localization -->
+	<Include file="locale\locales.xml"/>
+
+	<!-- media (textures, fonts, icons etc) -->
+	<Include file="media\media.xml" />
+
+	<!-- global stuff for the UI -->
+	<Include file="core\core.xml" />
+	
+	<!-- options menu -->
+	<Include file="modules\optionsmenu\optionsmenu.xml" />
+
+	<!-- faq -->
+	<Include file="modules\faq\faq.xml" />
+
+	<!-- keybind interface -->
+	<Include file="modules\keybind\keybind.xml" />
+
+	<!-- user configurable modules -->
+	<Include file="modules\actionbars\actionbars.xml" />
+	<Include file="modules\actionbuttons\actionbuttons.xml" />
+	<Include file="modules\auras\auras.xml" /> 
+	<Include file="modules\bags\bags.xml" />
+	<Include file="modules\castbars\castbars.xml" />
+	<Include file="modules\chat\chat.xml" />
+	<Include file="modules\combat\combat.xml" />
+	<Include file="modules\combatlog\combatlog.xml" />
+	<Include file="modules\error\error.xml" />
+	<Include file="modules\grouptools\grouptools.xml" />
+	<Include file="modules\loot\loot.xml" />
+	<Include file="modules\merchant\merchant.xml" />
+	<Include file="modules\minimap\minimap.xml" />
+	<Include file="modules\nameplates\nameplates.xml" />
+	<Include file="modules\panels\panels.xml" />
+	<Include file="modules\quest\quest.xml" />
+	<Include file="modules\skinning\skinning.xml" />
+	<Include file="modules\status\status.xml" />
+	<Include file="modules\timers\timers.xml" />
+	<Include file="modules\tooltip\tooltip.xml" />
+	<Include file="modules\unitframes\unitframes.xml" />
+	<Include file="modules\worldmap\worldmap.xml" />
+	<Include file="modules\misc\misc.xml" />
+	
+
+	<!-- GUIS specific key bindings -->
+	<Include file="Bindings.xml" />
+
+	<!-- not finished -->
+	<Script file="modules\font\font.lua" />
+</Ui>

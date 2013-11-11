@@ -1,0 +1,10 @@
+2013-03-12  Lars  <Lars@Lars-PC.lan>
+
+[4a6194ee3ad9] [v2.0.342]
+* .hgtags:
+
+Backed out merge changeset: 058f88a38bcd
+
+Backed out merge revision to its second parent (933f81b7f4b0)
+
+

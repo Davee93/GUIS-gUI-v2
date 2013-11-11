@@ -1,0 +1,9 @@
+2012-08-17  Goldpaw  <Goldpaw>
+
+[3277b1b8ea4b] [v2.0.340]
+* locale/ptBR/ptBR.lua, locale/ptPT/ptPT.lua, modules/panels/plugins.lua:
+
+- added updated Portugese locales by UnoPrata
+- changed the Friends panel plugin to not count duplicate entries (like having both bnet and wow character of a friend listed)
+
+

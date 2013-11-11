@@ -1,0 +1,28 @@
+﻿<Ui xmlns="http://www.blizzard.com/wow/ui/"
+ xmlGUIS:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ..\FrameXML\UI.xsd">
+	
+	<!-- set the keybinding strings, not the actual binds -->
+	<Script file="bindings.lua" />
+
+	<!-- set up the global colors -->
+	<Script file="colors.lua" />
+
+	<!-- define global functions -->
+	<Script file="functions.lua" />
+	
+	<!-- define global styling functions, stored in the functions library -->
+	<Script file="styling.lua" />
+
+	<!-- various chat commands for developers -->
+	<Script file="devtools.lua" />
+
+	<!-- the core of the UI, including version control, auto setup, etc -->
+	<Script file="core.lua" />
+
+	<!-- deactivated blizzard objects -->
+	<Script file="genocide.lua" />
+
+	<!-- some added chat commands, unrelated to the UI -->
+	<Script file="commands.lua" />
+</Ui>

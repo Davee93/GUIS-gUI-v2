@@ -1,0 +1,80 @@
+----------------------------------------------------------------------
+GUIS custom events, tutorial and listing
+----------------------------------------------------------------------
+
+A powerful feature of the gCore-3.0 library is the ability to create callbacks. These callbacks can respond to both WoW events and custom events. The point of a custom event is that it allows various GUIS modules to communicate with each other, regardless of whether they are in the same file or even the same addon. 
+
+I've used them so far to help modules know when to move their objects, like the WatchFrame or the UnitFrames when the actionbars or the micromenu is toggled.
+
+
+
+How to create or respond to custom GUIS events
+----------------------------------------------------------------------
+
+First you need to create a gCore module
+	local module = LibStub("gCore-3.0"):NewModule("My_gCore_Module")
+
+Then you might want to create some shortcuts for easier reference
+	local FireCallback = function(...) return module:FireCallback(...) end
+	local RegisterCallback = function(...) return module:RegisterCallback(...) end
+	local UnregisterCallback = function(...) return module:UnregisterCallback(...) end
+
+Now it's just a matter of using what you have created. 
+
+local reference = RegisterCallback(event[, callback])
+	@param event <string> The name of the event (custom or WoW) to register for notifications about
+	@param callback <function> a function to be called in the format function(self, event, ...). If none is provided, module[event](self, event, ...) will be called instead
+	@return reference <number> a unique identifier for your callback instance
+ Register an event with your module
+	
+FireCallback(event)
+	@param event <string> The name of the CUSTOM event to manually fire
+ Fire off an event for your own or an external module to respond to.
+
+UnregisterCallback(id)
+	@id <string, number> eventname (custom or WoW) as a string, or the unique 'reference' value returned by RegisterCallback()
+ Unregisters a callback from your gCore module. If 'id' is given as an eventname, ALL callbacks connected to that event will be deleted. If you just want a specific funtion to be unregistered, use the 'reference' identifier from RegisterCallback() as 'id' instead.
+
+ 
+
+GUIS custom events I've used so far
+----------------------------------------------------------------------
+
+GUIS_ACTIONBAR_VISIBILITY_UPDATE
+ Fired whenever an actionbar is hidden or shown by the GUIS actionbar module.
+	arg1 - the name of the bar as given to gActionBars-2.0. 
+	arg2 - 'true' if the bar was made visible, 'false' or 'nil' if it was hidden
+
+ The actionbar itself can be retrieved by; 
+	local bar = LibStub("gActionBars-2.0"):GetBar(arg1)
+	
+ If you wish to manually check if a bar is visible, use the following:
+ 	local isVisible = LibStub("gActionBars-2.0"):GetVisibilityBar(arg1):IsShown()
+		or
+ 	local isVisible = LibStub("gActionBars-2.0"):GetBar(arg1):IsVisible()
+
+GUIS_ACTIONBAR_BUTTON_UPDATE
+ Fired whenever an actionbar's buttons are changed in a way that can affect the layout (buttonsize, number of buttons, etc)
+	arg1 - the name of the bar as given to gActionBars-2.0. 
+	arg2 - a link to the actual bar object
+
+GUIS_ACTIONBAR_POSITION_UPDATE
+ Fired whenever an actionbar's position is changed in a way that can affect the layout
+	arg1 - the name of the bar as given to gActionBars-2.0. 
+	arg2 - a link to the actual bar object
+	
+GUIS_MICROMENU_SHOW
+ Fired whenever the GUIS micromenu is shown.
+	arg1 - pointer to the GUIS MicroMenu frame
+	
+GUIS_MICROMENU_HIDE
+ Fired whenever the GUIS micromenu is hidden.
+	arg1 - pointer to the GUIS MicroMenu frame
+	
+GUIS_INSTALL_SHOW
+	Fired whenever the /install tutorial is shown. Currently using this to hide specific custom frames like the FAQ module interface. Any module or addon having large custom frames visible should register a callback to hide their frames when this event fires off.
+
+GUIS_LOGO_HIDE
+	Fired a few seconds after the GUIS full screen logo is hidden, and also a few seconds after logging in and entering the game world. Even though the full screen logo by default isn't currently in use in any GUIS UI, the events are still there, serving as a reference point for when to start the automatic install tutorial.
+	
+	

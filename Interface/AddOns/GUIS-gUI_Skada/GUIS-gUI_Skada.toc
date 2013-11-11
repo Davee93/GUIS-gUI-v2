@@ -1,0 +1,10 @@
+## Interface: 40300
+## Title: |cFF4488FFGUIS:|r |cFFFF7D0Ag|r|cFFFFBB00UI|r|cFFFFFFFF|r - Skada Skin
+## Notes: Skins Skada in the style of |cFF4488FFGUIS:|r |cFFFF7D0Ag|r|cFFFFBB00UI|r|cFFFFFFFF|r
+## Author: Kkthnxbye
+## Version: 1.2
+## DefaultState: Enabled
+## RequiredDeps: GUIS-gUI, Skada
+
+GUIS-gUI_Skada.lua
+LoadSkinss.lua

@@ -1,0 +1,20 @@
+------------------------------------------------------------------------
+r100 | torhal | 2011-06-30 05:48:38 +0000 (Thu, 30 Jun 2011) | 1 line
+Changed paths:
+   A /tags/r99 release (from /trunk:99)
+
+Tagging as r99 release
+------------------------------------------------------------------------
+r99 | torhal | 2011-06-30 05:48:01 +0000 (Thu, 30 Jun 2011) | 1 line
+Changed paths:
+   M /trunk/LibKeyBound-1.0.toc
+
+ToC Interface version update.
+------------------------------------------------------------------------
+r98 | tardmrr | 2011-05-15 20:34:21 +0000 (Sun, 15 May 2011) | 2 lines
+Changed paths:
+   M /trunk/LibKeyBound-1.0/LibKeyBound-1.0.lua
+
+LibKeyBound-1.0:
+  * Fixed bug in keybind shortening code to catch 'SPACE' in addition to 'SPACEBAR'
+------------------------------------------------------------------------

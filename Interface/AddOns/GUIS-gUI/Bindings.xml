@@ -1,0 +1,60 @@
+﻿<Bindings>
+	<!-- TellTarget -->
+	<Binding name="GUISTELLTARGET" runOnUp="true" header="GUISKEYBINDSMAIN">
+		if (keystate == "up") then
+			if not(UnitExists("target")) then return end
+
+			local unitname, realm = UnitName("target")
+			if (unitname) then 
+				unitname = gsub(unitname, " ", "") 
+			end
+			
+			if (unitname) and not(UnitIsSameServer("player", "target")) then
+				unitname = unitname .. "-" .. gsub(realm, " ", "")
+			end
+	
+			ChatFrame_SendTell((unitname or ""), SELECTED_CHAT_FRAME)
+		end
+	</Binding>
+	<Binding name="GUISTELLFOCUS" runOnUp="true">
+		if (keystate == "up") then
+			if not(UnitExists("focus")) then return end
+
+			local unitname, realm = UnitName("focus")
+			if (unitname) then 
+				unitname = gsub(unitname, " ", "") 
+			end
+			
+			if (unitname) and not(UnitIsSameServer("player", "focus")) then
+				unitname = unitname .. "-" .. gsub(realm, " ", "")
+			end
+	
+			ChatFrame_SendTell((unitname or ""), SELECTED_CHAT_FRAME)
+		end
+	</Binding>
+	<!-- UI Panels -->
+	<Binding name="GUISSHOWTALENTS" runOnUp="true">
+		if (keystate == "up") then
+			if not(PlayerTalentFrame) then 
+				LoadAddOn("Blizzard_TalentUI")
+			end
+			
+			if not(PlayerTalentFrame:IsShown()) then
+				ShowUIPanel(PlayerTalentFrame)
+			end
+		end
+	</Binding>	<Binding name="GUISTOGGLECALENDAR" runOnUp="true">
+		if (keystate == "up") then
+			if not(CalendarFrame) then 
+				LoadAddOn("Blizzard_Calendar")
+			end
+			Calendar_Toggle()
+		end
+	</Binding>
+	<Binding name="GUISTOGGLECUSTOMERSUPPORT"  runOnUp="true">
+		if (keystate == "up") then
+			ToggleHelpFrame()
+		end
+	</Binding>
+</Bindings>
+
