@@ -54,7 +54,7 @@ barmod.ApplySettings_(self, win)
 	if win.db.enabletitle then
 		skada.button:SetBackdrop(titleBG)
 		skada.button:SetBackdropColor(.05,.05,.05, .9)
-		F.GlossAndShade(skada.button)
+		--F.GlossAndShade(skada.button)
 	end
 
 	skada:SetTexture("Interface\\AddOns\\GUIS-gUI\\media\\texture\\statusbar")
