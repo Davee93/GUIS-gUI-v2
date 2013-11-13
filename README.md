@@ -7,4 +7,4 @@ Maintained by Kkthnx :D
 
 Small changes here and there.
 
-![wowscrnshot_072513_222325](https://f.cloud.github.com/assets/1692977/860380/7ece332e-f5a4-11e2-8b17-378e4a10b0ef.png)
+![wowscrnshot_111313_065627](https://f.cloud.github.com/assets/1692977/1534335/9d4308d4-4c93-11e3-87a6-f5c98745f388.jpg)
