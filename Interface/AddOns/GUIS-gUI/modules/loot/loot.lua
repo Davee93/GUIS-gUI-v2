@@ -430,7 +430,7 @@ local PostUpdateLootFrame = function()
 end
 
 local InitLootFrame = function()
-	LootFrame:SetSize(150, 32)
+	LootFrame:SetSize(190, 32)
 	LootFrame:SetHitRectInsets(0, 0, 0, 0)
 
 	MakeBackdrop(LootFrame)
