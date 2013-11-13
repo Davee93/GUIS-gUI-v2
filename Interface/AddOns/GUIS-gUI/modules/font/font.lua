@@ -188,9 +188,9 @@ SetBlizzFonts = function(self)
 		SetFont(GameFontHighlight, text)
 		SetFont(NumberFont_Shadow_Med, text, 12)
 		SetFont(NumberFont_Shadow_Small, text, 12)
-		SetFont(SystemFont_Large, text, 15)
+		SetFont(SystemFont_Large, text, 13) -- Testing #1
 		SetFont(SystemFont_Med1, text, 12)
-		SetFont(SystemFont_Med3, text, 13)
+		SetFont(SystemFont_Med3, text, 12) -- Testing #2
 		SetFont(SystemFont_OutlineThick_Huge2, text, 20, "THICKOUTLINE")
 		SetFont(SystemFont_Outline_Small, NUMBER, 12, "OUTLINE")
 		SetFont(SystemFont_Shadow_Huge1, text, 20, "THINOUTLINE")

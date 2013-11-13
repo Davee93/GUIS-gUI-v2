@@ -78,7 +78,7 @@ local defaults = {
 	showTradeSkill = true; -- use our castbars for tradeskills 
 
 	player = { 
-		size = { 220, 28 }; -- 
+		size = { 180, 22 }; -- Match Target.
 		pos = { "BOTTOM", UIParent, "BOTTOM", 19, 250 }; -- (19)px (28+4+6)/2 (iconW+padding+2xBorder)
 	};
 	

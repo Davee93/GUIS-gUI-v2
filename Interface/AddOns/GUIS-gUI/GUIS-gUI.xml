@@ -27,6 +27,10 @@
 	<Include file="libs\LibKeyBound-1.0\LibKeyBound-1.0\lib.xml" />
 	<Include file="libs\cargBags\embed.xml" />
 	<Include file="libs\oUF\oUF.xml" />
+	
+	<!-- Chat Throttle libraries. -->
+	<Include file="libs\ChatThrottleLib.lua"/>
+	<Include file="libs\ChatThrottleStats.lua"/>
 
 	<!-- localization -->
 	<Include file="locale\locales.xml"/>
