@@ -30,7 +30,7 @@ module.OnInit = function(self)
 	if (DressUpModelRotateLeftButton) then DressUpModelRotateLeftButton:SetUITemplate("arrow", "left") end
 	if (DressUpModelRotateRightButton) then DressUpModelRotateRightButton:SetUITemplate("arrow", "right") end
 
-	DressUpFrame:RemoveTextures()
+	DressUpFrame:RemoveTextures(true)
 	DressUpFrame:SetUITemplate("backdrop", nil, 0, 6, 70, 32)
 	DressUpModel:SetUITemplate("backdrop"):SetBackdropColor(0, 0, 0, 1/3)
 	
