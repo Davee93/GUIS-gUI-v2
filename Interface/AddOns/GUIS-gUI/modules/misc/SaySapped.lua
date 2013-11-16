@@ -13,4 +13,3 @@ SaySapped:SetScript("OnEvent",function(...)
 end)
 
 SaySapped:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
-DEFAULT_CHAT_FRAME:AddMessage("SaySapped loaded")

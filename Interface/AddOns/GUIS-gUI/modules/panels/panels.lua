@@ -246,7 +246,7 @@ module.OnInit = function(self)
 	end
 
 	local r, g, b = unpack(C["overlay"])
-	local panelAlpha = 1
+	local panelAlpha = .9 -- Lets see through this together.. O.o
 
 	--
 	-- bottom left UI panel
@@ -258,11 +258,12 @@ module.OnInit = function(self)
 	panel[bottomLeftPanel]:SpawnPlugin("msfps", "CENTER")
 	panel[bottomLeftPanel]:SpawnPlugin("Guild", "RIGHT")
 	panel[bottomLeftPanel]:Refresh()
-	
+	--[[
 	panel[bottomLeftPanel].candyLayer = CreateFrame("Frame", nil, panel[bottomLeftPanel])
 	panel[bottomLeftPanel].candyLayer:SetPoint("TOPLEFT", 3, -3)
 	panel[bottomLeftPanel].candyLayer:SetPoint("BOTTOMRIGHT", -3, 3)
 	F.GlossAndShade(panel[bottomLeftPanel].candyLayer)
+	]]--
 
 	--
 	-- bottom right UI panel
@@ -274,12 +275,12 @@ module.OnInit = function(self)
 	panel[bottomRightPanel]:SpawnPlugin("Gold", "CENTER")
 	panel[bottomRightPanel]:SpawnPlugin("Durability", "RIGHT")
 	panel[bottomRightPanel]:Refresh()
-	
+	--[[
 	panel[bottomRightPanel].candyLayer = CreateFrame("Frame", nil, panel[bottomRightPanel])
 	panel[bottomRightPanel].candyLayer:SetPoint("TOPLEFT", 3, -3)
 	panel[bottomRightPanel].candyLayer:SetPoint("BOTTOMRIGHT", -3, 3)
 	F.GlossAndShade(panel[bottomRightPanel].candyLayer)
-
+	]]--
 	-- for easier external access
 	panel.BottomLeft = panel[bottomLeftPanel]
 	panel.BottomRight = panel[bottomRightPanel]

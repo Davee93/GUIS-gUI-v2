@@ -11,4 +11,6 @@
 	<Script file="GuildMemberStatus.lua" />
 	<Script file="SaySapped.lua" /> 
 	<Script file="Stats.lua" />
+	<Script file="AlreadyKnown.lua" />
+	<Script file="Interrupted.lua" />
 </Ui>

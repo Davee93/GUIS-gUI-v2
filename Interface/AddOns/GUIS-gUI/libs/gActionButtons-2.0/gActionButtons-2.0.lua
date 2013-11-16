@@ -577,10 +577,10 @@ function gActionButtons:Enable()
 		EventFrame:RegisterEvent("ACTIONBAR_PAGE_CHANGED")
 	end
 
---		hooksecurefunc("ShapeshiftBar_OnLoad", StyleShapeShiftButtons)
---		hooksecurefunc("ShapeshiftBar_Update", StyleShapeShiftButtons)
---		hooksecurefunc("ShapeshiftBar_UpdateState", StyleShapeShiftButtons)
---		hooksecurefunc("PetActionBar_Update", StylePetActionButtons)
+		hooksecurefunc("ShapeshiftBar_OnLoad", StyleShapeShiftButtons)
+		hooksecurefunc("ShapeshiftBar_Update", StyleShapeShiftButtons)
+		hooksecurefunc("ShapeshiftBar_UpdateState", StyleShapeShiftButtons)
+		hooksecurefunc("PetActionBar_Update", StylePetActionButtons)
 	
 	if (hasEnteredWorld) then
 		self:OnEnter()

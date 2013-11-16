@@ -636,7 +636,7 @@ module.OnInit = function(self)
 		Minimap:PlaceAndSave("TOPLEFT", UIParent, "TOPLEFT", 11, -11)
 		Minimap:SetUITemplate("backdrop")
 		
-		local darkener = Minimap:CreateTexture()
+		--[[local darkener = Minimap:CreateTexture()
 		darkener:SetDrawLayer("BORDER", 1)
 		darkener:SetTexture(0, 0, 0)
 		darkener:SetAlpha(1/4)
@@ -653,7 +653,7 @@ module.OnInit = function(self)
 		shade:ClearAllPoints()
 		shade:SetPoint("TOPLEFT", -1, 1)
 		shade:SetPoint("BOTTOMRIGHT", 1, -1)
-		Minimap.shadeTexture = shade
+		Minimap.shadeTexture = shade]]--
 	end
 	
 	-- 

@@ -690,7 +690,7 @@ F.SafeCall = function(func, ...)
 		local args = { ... }
 		local callback, safecall
 		safecall = function()
-			func((args) and unpack(args))
+			--func((args) and unpack(args)) -- wtf
 			args = nil
 			if (callback) then
 				UnregisterCallback(callback)
