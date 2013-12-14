@@ -871,7 +871,7 @@ UnitSpecific = {
 			DruidMana:SetHeight(settings.player.powerbarsize)
 			DruidMana:SetPoint("LEFT", self, "LEFT", 0, 0)
 			DruidMana:SetPoint("RIGHT", self, "RIGHT", 0, 0)
-			DruidMana:SetPoint("BOTTOM", self, "BOTTOM", 0, 16)
+			DruidMana:SetPoint("BOTTOM", self, "BOTTOM", 0, 21)
 			DruidMana:SetStatusBarTexture(M["StatusBar"]["StatusBar"])
 			DruidMana:GetStatusBarTexture():SetHorizTile(false)
 			DruidMana:SetStatusBarColor(C["PowerBarColor"]["MANA"].r, C["PowerBarColor"]["MANA"].g, C["PowerBarColor"]["MANA"].b)
@@ -914,7 +914,7 @@ UnitSpecific = {
 			TotemBar:SetHeight(settings.player.powerbarsize)
 			TotemBar:SetPoint("LEFT", self, "LEFT", 0, 0)
 			TotemBar:SetPoint("RIGHT", self, "RIGHT", 0, 0)
-			TotemBar:SetPoint("BOTTOM", self, "BOTTOM", 0, 16)
+			TotemBar:SetPoint("BOTTOM", self, "BOTTOM", 0, 21)
 
 			TotemBar.UpdateColors = true
 
@@ -960,7 +960,7 @@ UnitSpecific = {
 			Runes:SetHeight(settings.player.powerbarsize)
 			Runes:SetPoint("LEFT", self, "LEFT", 0, 0)
 			Runes:SetPoint("RIGHT", self, "RIGHT", 0, 0)
-			Runes:SetPoint("BOTTOM", self, "BOTTOM", 0, 16)
+			Runes:SetPoint("BOTTOM", self, "BOTTOM", 0, 21)
 			
 			for i = 1, 6 do
 				Runes[i] = CreateFrame("StatusBar", nil, Runes)
@@ -1001,7 +1001,7 @@ UnitSpecific = {
 			EclipseBar:SetFrameLevel(self.Power:GetFrameLevel())
 			EclipseBar:SetPoint("LEFT", self, "LEFT", 0, 0)
 			EclipseBar:SetPoint("RIGHT", self, "RIGHT", 0, 0)
-			EclipseBar:SetPoint("BOTTOM", self, "BOTTOM", 0, 16)
+			EclipseBar:SetPoint("BOTTOM", self, "BOTTOM", 0, 21)
 			EclipseBar:SetSize(self:GetWidth(), settings.player.powerbarsize + 1)
 			
 			EclipseBar.bg = EclipseBar:CreateTexture(nil, "BORDER")
@@ -1053,7 +1053,7 @@ UnitSpecific = {
 			SoulShards:SetHeight(settings.player.powerbarsize)
 			SoulShards:SetPoint("LEFT", self, "LEFT", 0, 0)
 			SoulShards:SetPoint("RIGHT", self, "RIGHT", 0, 0)
-			SoulShards:SetPoint("BOTTOM", self, "BOTTOM", 0, 16)
+			SoulShards:SetPoint("BOTTOM", self, "BOTTOM", 0, 21)
 
 			for i = 1, SHARD_BAR_NUM_SHARDS do
 				SoulShards[i] = CreateFrame("StatusBar", nil, SoulShards)
@@ -1089,7 +1089,7 @@ UnitSpecific = {
 			HolyPower:SetHeight(settings.player.powerbarsize)
 			HolyPower:SetPoint("LEFT", self, "LEFT", 0, 0)
 			HolyPower:SetPoint("RIGHT", self, "RIGHT", 0, 0)
-			HolyPower:SetPoint("BOTTOM", self, "BOTTOM", 0, 16)
+			HolyPower:SetPoint("BOTTOM", self, "BOTTOM", 0, 21)
 			HolyPower:SetFrameLevel(self.Power:GetFrameLevel())
 
 			for i = 1, MAX_HOLY_POWER do
