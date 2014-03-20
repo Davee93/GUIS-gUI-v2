@@ -60,7 +60,7 @@ local defaults = {
 	useLootFrame = true; -- use the Loot frame, and maintain its channels and groups
 	
 	-- chat bubble module
-	collapseBubbles = true; -- shrink and expand chatbubbles on mouseover
+	collapseBubbles = false; -- shrink and expand chatbubbles on mouseover
 	
 	-- chat frame settings
 	abbreviateChannels = true; -- abbreviate channel names
@@ -74,7 +74,7 @@ local defaults = {
 	enableWhisperSound = true;
 
 	-- timestamps
-	useTimeStamps = true;
+	useTimeStamps = false;
 	useTimeStampsInLoot = false; -- display the timestamps in the "Loot" window
 	timeStampFormat = "%H:%M"; 
 	timeStampColor = { 0.6, 0.6, 0.6 };

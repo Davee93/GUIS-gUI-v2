@@ -442,16 +442,43 @@ local showIcon = function()
 	end
 
 	frame.icon:SetTexture(icon)
-	frame:Show()
+	frame:Show()	
 end
 
 local StyleToolTip = function(self)
 	if not(self) then
 		return
 	end
+	
+	-- Style the Tooltip and color border.
+	local function style(self)
+	if(not self) then return end
+	if(not self.freebtipBD) then
+		--self:SetUITemplate("blank") -- We need to apply it here.
+	end
+		if self.GetItem then
+			local _, item = self:GetItem()
+			if(item) then
+				local quality = select(3, GetItemInfo(item))
+				if quality and quality >= 2 then
+					local r, g, b = GetItemQualityColor(quality)
+					self:SetBackdropBorderColor(r, g, b)
+				end		
+			end
+		end
+		local frameName = self:GetName()
+		if(not frameName) then return end
+	end
+	for i, self in ipairs(TOOLTIPS) do
+		if(self) then
+			self:HookScript("OnShow", function(self)
+				style(self)
+			end)
+		end
+	end
 
 	self:HookScript("OnShow", function(self) 
-		self:SetBackdrop(M["Backdrop"]["Blank-Inset"])
+	self:SetBackdrop(M["Backdrop"]["Blank-Inset"])
 		
 		-- this makes sure the tooltips have a correct scale, regardless of its parent
 		self:SetScale(UIParent:GetScale() / self:GetEffectiveScale())
@@ -514,6 +541,122 @@ module.Init = function(self)
 	
 	GUIS_DB["tooltip"].hidewhilecombat = 0
 end
+
+----------------------------------------------------------------------------------------
+--	Fix compare tooltips(by Blizzard)(../FrameXML/GameTooltip.lua)
+----------------------------------------------------------------------------------------
+hooksecurefunc("GameTooltip_ShowCompareItem", function(self, shift)
+	if not self then
+		self = GameTooltip
+	end
+	local item, link = self:GetItem()
+	if not link then return end
+
+	local shoppingTooltip1, shoppingTooltip2, shoppingTooltip3 = unpack(self.shoppingTooltips)
+
+	local item1 = nil
+	local item2 = nil
+	local item3 = nil
+	local side = "left"
+	if shoppingTooltip1:SetHyperlinkCompareItem(link, 1, shift, self) then
+		item1 = true
+	end
+	if shoppingTooltip2:SetHyperlinkCompareItem(link, 2, shift, self) then
+		item2 = true
+	end
+	if shoppingTooltip3:SetHyperlinkCompareItem(link, 3, shift, self) then
+		item3 = true
+	end
+
+	-- Find correct side
+	local rightDist = 0
+	local leftPos = self:GetLeft()
+	local rightPos = self:GetRight()
+	if not rightPos then
+		rightPos = 0
+	end
+	if not leftPos then
+		leftPos = 0
+	end
+
+	rightDist = GetScreenWidth() - rightPos
+
+	if leftPos and (rightDist < leftPos) then
+		side = "left"
+	else
+		side = "right"
+	end
+
+	-- See if we should slide the tooltip
+	if self:GetAnchorType() and self:GetAnchorType() ~= "ANCHOR_PRESERVE" then
+		local totalWidth = 0
+
+		if item1 then
+			totalWidth = totalWidth + shoppingTooltip1:GetWidth()
+		end
+		if item2 then
+			totalWidth = totalWidth + shoppingTooltip2:GetWidth()
+		end
+		if item3 then
+			totalWidth = totalWidth + shoppingTooltip3:GetWidth()
+		end
+
+		if side == "left" and totalWidth > leftPos then
+			self:SetAnchorType(self:GetAnchorType(), totalWidth - leftPos, 0)
+		elseif side == "right" and (rightPos + totalWidth) > GetScreenWidth() then
+			self:SetAnchorType(self:GetAnchorType(), -((rightPos + totalWidth) - GetScreenWidth()), 0)
+		end
+	end
+
+	-- Anchor the compare tooltips
+	if item3 then
+		shoppingTooltip3:SetOwner(self, "ANCHOR_NONE")
+		shoppingTooltip3:ClearAllPoints()
+		if side and side == "left" then
+			shoppingTooltip3:SetPoint("TOPRIGHT", self, "TOPLEFT", -3, -10)
+		else
+			shoppingTooltip3:SetPoint("TOPLEFT", self, "TOPRIGHT", 3, -10)
+		end
+		shoppingTooltip3:SetHyperlinkCompareItem(link, 3, shift, self)
+		shoppingTooltip3:Show()
+	end
+
+	if item1 then
+		if item3 then
+			shoppingTooltip1:SetOwner(shoppingTooltip3, "ANCHOR_NONE")
+		else
+			shoppingTooltip1:SetOwner(self, "ANCHOR_NONE")
+		end
+		shoppingTooltip1:ClearAllPoints()
+		if side and side == "left" then
+			if item3 then
+				shoppingTooltip1:SetPoint("TOPRIGHT", shoppingTooltip3, "TOPLEFT", -3, 0)
+			else
+				shoppingTooltip1:SetPoint("TOPRIGHT", self, "TOPLEFT", -3, -10)
+			end
+		else
+			if item3 then
+				shoppingTooltip1:SetPoint("TOPLEFT", shoppingTooltip3, "TOPRIGHT", 3, 0)
+			else
+				shoppingTooltip1:SetPoint("TOPLEFT", self, "TOPRIGHT", 3, -10)
+			end
+		end
+		shoppingTooltip1:SetHyperlinkCompareItem(link, 1, shift, self)
+		shoppingTooltip1:Show()
+
+		if item2 then
+			shoppingTooltip2:SetOwner(shoppingTooltip1, "ANCHOR_NONE")
+			shoppingTooltip2:ClearAllPoints()
+			if side and side == "left" then
+				shoppingTooltip2:SetPoint("TOPRIGHT", shoppingTooltip1, "TOPLEFT", -3, 0)
+			else
+				shoppingTooltip2:SetPoint("TOPLEFT", shoppingTooltip1, "TOPRIGHT", 3, 0)
+			end
+			shoppingTooltip2:SetHyperlinkCompareItem(link, 2, shift, self)
+			shoppingTooltip2:Show()
+		end
+	end
+end)
 
 module.OnInit = function(self)
 	if F.kill(self:GetName()) then 
@@ -719,4 +862,3 @@ module.OnInit = function(self)
 		FAQ:NewGroup(faq)
 	end	
 end
-

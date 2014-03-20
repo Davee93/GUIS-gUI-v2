@@ -158,8 +158,9 @@ module.OnInit = function(self)
 		local Durability = button:CreateFontString(button:GetName() .. "Durability", "OVERLAY")
 		Durability:SetJustifyH("CENTER")
 		Durability:SetJustifyV("MIDDLE")
-		Durability:SetPoint("CENTER", button, "CENTER", 2, 0)
-		Durability:SetFontObject(GUIS_NumberFontNormal)
+		Durability:SetPoint("CENTER", button, "BOTTOM", 2, 10)
+		Durability:SetShadowOffset(0, 0)
+		Durability:SetFontObject(GUIS_PanelFont)
 		Durability:Hide()
 		
 		button.Durability = Durability

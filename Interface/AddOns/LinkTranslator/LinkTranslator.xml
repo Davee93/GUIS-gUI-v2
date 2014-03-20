@@ -1,0 +1,110 @@
+﻿<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/..\..\FrameXML\UI.xsd">
+
+<!-- This is the hidden frame that launches the whole addon -->
+<Frame name="LinkTranslatorFrame" parent="UIParent" hidden="true">
+	<Scripts>
+		<OnLoad>LinkTranslator:OnLoad(self);</OnLoad>
+		<OnEvent>LinkTranslator:OnEvent(self, event, ...);</OnEvent>
+	</Scripts>
+</Frame>
+
+<!-- These are the custom font & button styles that we have defined -->
+<Font name="LinkTranslatorXML_Font_Title" font="Fonts\FRIZQT__.TTF" outline="NORMAL" virtual="true">
+	<Shadow>
+		<Offset><AbsDimension x="2" y="-2"/></Offset>
+		<Color r="0" g="0" b="0"/>
+	</Shadow>
+	<FontHeight><AbsValue val="18"/></FontHeight>
+	<Color r="1.0" g="0.78" b="0"/>
+</Font>
+
+<!-- This frame holds the Addon options Window -->
+<Frame name="LinkTranslatorXML_Settings_Frame" parent="InterfaceOptionsFramePanelContainer">
+	<Scripts>
+		<OnLoad>LinkTranslator:SettingsFrame_OnLoad(self, LinkTranslatorXML_Settings_Frame_Title);</OnLoad>
+		<OnShow>LinkTranslator:SettingsFrame_Show(self, LinkTranslatorXML_Settings_Frame_Info7a,LinkTranslatorXML_Settings_Frame_Info7b,LinkTranslatorXML_Settings_Frame_Info7c,LinkTranslatorXML_Settings_Frame_Info7d);</OnShow>
+	</Scripts>
+
+	<Layers>
+		<Layer level="ARTWORK">
+			<!-- At the top of the form -->
+			<FontString name="LinkTranslatorXML_Settings_Frame_Title" inherits="LinkTranslatorXML_Font_Title" text="LinkTranslator: X.Y.Z">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parent" relativePoint="TOPLEFT"><Offset><AbsDimension x="10" y="-20"/></Offset></Anchor>
+				</Anchors>
+			</FontString>
+
+			<FontString name="LinkTranslatorXML_Settings_Frame_Info1" inherits="GameFontHighlightSmall" justifyH="LEFT" text="Translates |cffffc700[Itemlinks]|r posted in chat into your local client's language.">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="LinkTranslatorXML_Settings_Frame_Title" relativePoint="BOTTOMLEFT"><Offset><AbsDimension x="10" y="-10"/></Offset></Anchor>
+					<Anchor point="TOPRIGHT" relativeTo="$parent" relativePoint="TOPRIGHT"><Offset><AbsDimension x="-10" y="0"/></Offset></Anchor>
+				</Anchors>
+			</FontString>
+
+			<FontString name="LinkTranslatorXML_Settings_Frame_Info2" inherits="GameFontHighlightSmall" justifyH="LEFT" text="If links fail to translate then its most likely because the games's local database">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="LinkTranslatorXML_Settings_Frame_Info1" relativePoint="BOTTOMLEFT"><Offset><AbsDimension x="10" y="-15"/></Offset></Anchor>
+					<Anchor point="TOPRIGHT" relativeTo="$parent" relativePoint="TOPRIGHT"><Offset><AbsDimension x="-10" y="0"/></Offset></Anchor>
+				</Anchors>
+			</FontString>
+			<FontString name="LinkTranslatorXML_Settings_Frame_Info3" inherits="GameFontHighlightSmall" justifyH="LEFT" text="does not have the item/spell in cache yet.">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="LinkTranslatorXML_Settings_Frame_Info2" relativePoint="BOTTOMLEFT"><Offset><AbsDimension x="0" y="-6"/></Offset></Anchor>
+					<Anchor point="TOPRIGHT" relativeTo="$parent" relativePoint="TOPRIGHT"><Offset><AbsDimension x="-10" y="0"/></Offset></Anchor>
+				</Anchors>
+			</FontString>
+
+			<FontString name="LinkTranslatorXML_Settings_Frame_Info4" inherits="GameFontHighlightSmall" justifyH="LEFT" text="Example:">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="LinkTranslatorXML_Settings_Frame_Info3" relativePoint="BOTTOMLEFT"><Offset><AbsDimension x="0" y="-25"/></Offset></Anchor>
+					<Anchor point="TOPRIGHT" relativeTo="$parent" relativePoint="TOPRIGHT"><Offset><AbsDimension x="-10" y="0"/></Offset></Anchor>
+				</Anchors>
+			</FontString>
+			<FontString name="LinkTranslatorXML_Settings_Frame_Info5" inherits="GameFontHighlightSmall" justifyH="LEFT" text="If someone with a german client links something in chat: |cffc0c0c0[Kaputter S.I.E.G.-Knopf]|r">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="LinkTranslatorXML_Settings_Frame_Info4" relativePoint="BOTTOMLEFT"><Offset><AbsDimension x="10" y="-6"/></Offset></Anchor>
+					<Anchor point="TOPRIGHT" relativeTo="$parent" relativePoint="TOPRIGHT"><Offset><AbsDimension x="-10" y="0"/></Offset></Anchor>
+				</Anchors>
+			</FontString>
+			<FontString name="LinkTranslatorXML_Settings_Frame_Info6" inherits="GameFontHighlightSmall" justifyH="LEFT" text="and you are running the english client then you will see |cffc0c0c0[Broken I.W.I.N. Button]|r instead.">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="LinkTranslatorXML_Settings_Frame_Info5" relativePoint="BOTTOMLEFT"><Offset><AbsDimension x="0" y="-6"/></Offset></Anchor>
+					<Anchor point="TOPRIGHT" relativeTo="$parent" relativePoint="TOPRIGHT"><Offset><AbsDimension x="-10" y="0"/></Offset></Anchor>
+				</Anchors>
+			</FontString>
+
+			<FontString name="LinkTranslatorXML_Settings_Frame_Info7" inherits="GameFontHighlightSmall" justifyH="LEFT" text="Statistics:">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="LinkTranslatorXML_Settings_Frame_Info6" relativePoint="BOTTOMLEFT"><Offset><AbsDimension x="-10" y="-25"/></Offset></Anchor>
+					<Anchor point="TOPRIGHT" relativeTo="$parent" relativePoint="TOPRIGHT"><Offset><AbsDimension x="-10" y="0"/></Offset></Anchor>
+				</Anchors>
+			</FontString>
+			<FontString name="LinkTranslatorXML_Settings_Frame_Info7a" inherits="GameFontHighlightSmall" justifyH="LEFT" text="">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="LinkTranslatorXML_Settings_Frame_Info7" relativePoint="BOTTOMLEFT"><Offset><AbsDimension x="10" y="-6"/></Offset></Anchor>
+					<Anchor point="TOPRIGHT" relativeTo="$parent" relativePoint="TOPRIGHT"><Offset><AbsDimension x="-10" y="0"/></Offset></Anchor>
+				</Anchors>
+			</FontString>
+			<FontString name="LinkTranslatorXML_Settings_Frame_Info7b" inherits="GameFontHighlightSmall" justifyH="LEFT" text="">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="LinkTranslatorXML_Settings_Frame_Info7a" relativePoint="BOTTOMLEFT"><Offset><AbsDimension x="0" y="-6"/></Offset></Anchor>
+					<Anchor point="TOPRIGHT" relativeTo="$parent" relativePoint="TOPRIGHT"><Offset><AbsDimension x="-10" y="0"/></Offset></Anchor>
+				</Anchors>
+			</FontString>
+			<FontString name="LinkTranslatorXML_Settings_Frame_Info7c" inherits="GameFontHighlightSmall" justifyH="LEFT" text="">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="LinkTranslatorXML_Settings_Frame_Info7b" relativePoint="BOTTOMLEFT"><Offset><AbsDimension x="0" y="-6"/></Offset></Anchor>
+					<Anchor point="TOPRIGHT" relativeTo="$parent" relativePoint="TOPRIGHT"><Offset><AbsDimension x="-10" y="0"/></Offset></Anchor>
+				</Anchors>
+			</FontString>
+			<FontString name="LinkTranslatorXML_Settings_Frame_Info7d" inherits="GameFontHighlightSmall" justifyH="LEFT" text="">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="LinkTranslatorXML_Settings_Frame_Info7c" relativePoint="BOTTOMLEFT"><Offset><AbsDimension x="0" y="-6"/></Offset></Anchor>
+					<Anchor point="TOPRIGHT" relativeTo="$parent" relativePoint="TOPRIGHT"><Offset><AbsDimension x="-10" y="0"/></Offset></Anchor>
+				</Anchors>
+			</FontString>
+		</Layer>
+	</Layers>
+</Frame>
+
+</Ui>

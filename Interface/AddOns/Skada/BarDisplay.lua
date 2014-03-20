@@ -307,6 +307,8 @@ function mod:Update(win)
 					-- Default color text.
 					bar.label:SetTextColor(1,1,1,1)
 					bar.timerLabel:SetTextColor(1,1,1,1)
+					bar.label:SetShadowOffset(0,0)
+					bar.timerLabel:SetShadowOffset(0,0)
 				end
 			end
 			
@@ -419,9 +421,7 @@ end
 function mod:CreateBar(win, name, label, value, maxvalue, icon, o)
 	local bar = win.bargroup:NewCounterBar(name, label, value, maxvalue, icon, o)
 	bar:EnableMouseWheel(true)
-	--bar:CreateUIShadow()
 	F.GlossAndShade(bar)
-	--bar.iconFrame:SetUITemplate("simpleborder")
 	bar:SetScript("OnMouseWheel", function(f, d) mod:OnMouseWheel(win, f, d) end)
 	bar.iconFrame:SetScript("OnEnter", nil)
 	bar.iconFrame:SetScript("OnLeave", nil)

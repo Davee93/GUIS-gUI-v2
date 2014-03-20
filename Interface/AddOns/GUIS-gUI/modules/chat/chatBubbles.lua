@@ -48,7 +48,7 @@ Style = function(bubble)
 	
 	local scale = WorldFrame:GetHeight()/UIParent:GetHeight()
 	bubble:SetBackdrop({
-		bgFile = M["Background"]["Blank"];
+		bgFile = M["Background"]["MildSatin"];
 		edgeFile = M["Background"]["Blank"];
 		tile = false; 
 		tileSize = 0; 

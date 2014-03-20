@@ -184,6 +184,7 @@ gPanel:RegisterUITemplate("itembutton", function(object, arg)
 		object.Shade:ClearAllPoints()
 		object.Shade:SetPoint("TOPLEFT", object, "TOPLEFT", 3, -3)
 		object.Shade:SetPoint("BOTTOMRIGHT", object, "BOTTOMRIGHT", -3, 3)
+		object.Shade:Hide()
 		
 	else 
 		object.Shade = object:CreateTexture()
@@ -194,6 +195,7 @@ gPanel:RegisterUITemplate("itembutton", function(object, arg)
 		object.Shade:ClearAllPoints()
 		object.Shade:SetPoint("TOPLEFT", object, "TOPLEFT", 3, -3)
 		object.Shade:SetPoint("BOTTOMRIGHT", object, "BOTTOMRIGHT", -3, 3)
+		object.Shade:Hide()
 		
 		if (object:GetName()) then
 			_G[object:GetName() .. "Shade"] = object.Shade
@@ -1045,8 +1047,9 @@ F.GlossAndShade = function(self, target)
 	self.Shade = self.Shade or self:CreateTexture()
 	self.Shade:SetDrawLayer("OVERLAY", 1)
 	self.Shade:SetTexture(M["Button"]["Shade"])
-	self.Shade:SetVertexColor(0, 0, 0, 1/4)
+	self.Shade:SetVertexColor(0, 0, 0, 0)
 	self.Shade:SetAllPoints(target or self)
+	self.Shade:Hide()
 
 	self.Gloss = self.Gloss or self:CreateTexture()
 	self.Gloss:SetDrawLayer("OVERLAY", 2)

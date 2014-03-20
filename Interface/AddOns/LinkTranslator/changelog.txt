@@ -1,0 +1,33 @@
+LinkTranslator - Changelog
+
+Version	1.0.5	(2014-03-18)		-Wow patch 5.4.7
+	Fix for crash when receiving oversized tradelinks
+	Should no longer replace links with empty strings if not found.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Version	1.0.4	(2013-09-08)		-Wow patch 5.4.0
+	Updated .TOC for WOW patch 5.4.0
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Version	1.0.3	(2013-05-20)		-Wow patch 5.3.0
+	Updated .TOC for WOW patch 5.3.0
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Version	1.0.2	(2013-03-05)		-Wow patch 5.2.0
+	Updated .TOC for WOW patch 5.2.0
+	Made tooltipscanner more robust for future bugs due to unknown linktypes
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Version	1.0.1	(2013-01-20)		-Wow patch 5.1.0
+	Tradeskill links like Jewelcrafting, Enchanting, Engineering, and so on will now be translated
+	Battlepet links like 'Albino Snake', 'Darkmoon Baloon' will also work
+	Added some running statistics to the addon-interface page
+	Removed dependency on support classes
+	Optimized code
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Version	1.0.0	(2013-01-18)		-Wow patch 5.1.0
+	First version released
+	Special thanks to Doliprane-Aggramar(EU) for helping me out with the testing
+	Thanks to Phanx for posting code for the messageevent filtering
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

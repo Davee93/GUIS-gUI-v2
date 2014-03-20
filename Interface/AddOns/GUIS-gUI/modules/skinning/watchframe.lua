@@ -27,7 +27,7 @@ module.OnInit = function(self)
 		return 
 	end
 
-	WatchFrameCollapseExpandButton:SetUITemplate("arrow", "down")
+	WatchFrameCollapseExpandButton:SetUITemplate("closebutton") -- Looks better as a close button :D
 	
 	do
 		local normal = WatchFrameCollapseExpandButton:GetNormalTexture()
@@ -53,6 +53,10 @@ module.OnInit = function(self)
 		numItems = WATCHFRAME_NUM_ITEMS
 	end
 	styleWatchFrameItems()
+	
+	-- Clean it up just a bit. :D Sorry Goldie.
+	WatchFrameTitle:Hide()
+	WatchFrameTitle.Show = null
 
 	hooksecurefunc("WatchFrame_DisplayTrackedQuests", styleWatchFrameItems)
 	hooksecurefunc("WatchFrameItem_OnShow", styleWatchFrameItems)

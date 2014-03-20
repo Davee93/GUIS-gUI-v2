@@ -1,10 +1,10 @@
+if IsAddOnLoaded("Skada") then
+
 local GUIS = LibStub("gCore-3.0"):GetModule("GUIS-gUI: Core")
 local M = LibStub("gMedia-3.0")
 local C = LibStub("gDB-1.0"):GetDataBase("GUIS-gUI: Colors")
 local F = LibStub("gDB-1.0"):GetDataBase("GUIS-gUI: Functions")
 local RegisterCallback = function(...) return module:RegisterCallback(...) end
-
-if IsAddOnLoaded("Skada") then
 
 local function CreateBackdrop(b)
 	

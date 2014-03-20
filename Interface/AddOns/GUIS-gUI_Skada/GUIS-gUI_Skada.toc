@@ -7,4 +7,3 @@
 ## RequiredDeps: GUIS-gUI, Skada
 
 GUIS-gUI_Skada.lua
-LoadSkinss.lua

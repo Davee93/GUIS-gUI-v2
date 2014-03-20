@@ -1,0 +1,13 @@
+﻿## Interface: 50400
+## Title: LinkTranslator
+## Version: 1.0.5
+## X-AddonType: FULL
+## Notes: Translates |cffffc700[Itemlinks]|r posted in chat into your local client's language.
+## Dependencies:
+## LoadOnDemand: 0
+## DefaultState: enabled
+
+HiddenTooltip.lua
+LinkParsing.lua
+LinkTranslator.lua
+LinkTranslator.xml

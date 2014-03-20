@@ -10,6 +10,7 @@
 
 	<!-- functionality -->
 	<Script file="copyURL.lua" />
+	<Script file="copyChat.lua" />
 	<Script file="realIDlinks.lua" />
 	<Script file="tellTarget.lua" />
 

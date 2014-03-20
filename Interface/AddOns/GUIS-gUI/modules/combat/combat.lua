@@ -29,18 +29,18 @@ local defaults = {
 	threat = true; -- show our threat bar
 	
 	-- dps/heal settings
-	showSoloDPS = false; -- show the DPS meter when you are solo/ungrouped
+	showSoloDPS = true; -- show the DPS meter when you are solo/ungrouped
 	showPvPDPS = false; -- show the DPS meter in PvP situations
 	showDPSVerboseReport = true; -- give a simple verbose report to the chat upon combat end
 	minDPS = 1000; -- don't show reports unless you do at least this much DPS
 	minTime = 60; -- don't show reports for fights shorter than this in seconds
 	
 	-- threat settings
-	showWarnings = true; -- show warnings when you change threat group
+	showWarnings = false; -- show warnings when you change threat group
 	showSoloThreat = false; -- show the threat meter when you are solo/ungrouped
 	showPvPThreat = false; -- show the threat meter in PvP situations (will show for pets, bosses, npcs, etc)
 	showHealerThreat = false; -- shows the threat meter for healers as well as tanks/dps
-	showFocusThreat = true; -- shows the threat for the focus target instead of target when availble
+	showFocusThreat = false; -- shows the threat for the focus target instead of target when availble
 }
 
 local menuTable = {

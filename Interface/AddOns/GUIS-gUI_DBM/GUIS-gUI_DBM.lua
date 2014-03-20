@@ -1,4 +1,12 @@
-
+	if not IsAddOnLoaded("DBM-Core") then return end
+	
+	-- gUI API 
+	local GUIS = LibStub("gCore-3.0"):GetModule("GUIS-gUI: Core")
+	local M = LibStub("gMedia-3.0")
+	local C = LibStub("gDB-1.0"):GetDataBase("GUIS-gUI: Colors")
+	local F = LibStub("gDB-1.0"):GetDataBase("GUIS-gUI: Functions")
+	local RegisterCallback = function(...) return module:RegisterCallback(...) end
+	
 	-- ICON CONFIG // TRUE or FALSE 
 	
 	local lefticon = true             -- set to true if you use left icon // Default
@@ -17,24 +25,17 @@
 			local icon2 = _G[frame:GetName().."BarIcon2"]
 			local name = _G[frame:GetName().."BarName"]
 			local timer = _G[frame:GetName().."BarTimer"]
-			bar:SetHeight(10)
+			bar:SetHeight(12)
 			bar:SetFrameLevel(0)
-			
-			-- gUI API 
-			local GUIS = LibStub("gCore-3.0"):GetModule("GUIS-gUI: Core")
-			local M = LibStub("gMedia-3.0")
-			local C = LibStub("gDB-1.0"):GetDataBase("GUIS-gUI: Colors")
-			local F = LibStub("gDB-1.0"):GetDataBase("GUIS-gUI: Functions")
-			local RegisterCallback = function(...) return module:RegisterCallback(...) end
 			
 			-- BAR STYLE			
 			texture:SetTexture("Interface\\AddOns\\GUIS-gUI\\media\\texture\\statusbar")
 			icon1:SetTexCoord(.1,.9,.1,.9) 
 			icon1:ClearAllPoints()
-			icon1:SetPoint("BOTTOMRIGHT", frame, "BOTTOMLEFT", -6, 5)
+			icon1:SetPoint("BOTTOMRIGHT", frame, "BOTTOMLEFT", -6, 4)
 			icon2:SetTexCoord(.1,.9,.1,.9) 
 			icon2:ClearAllPoints()
-			icon2:SetPoint("BOTTOMLEFT", frame, "BOTTOMRIGHT", 6, 5)
+			icon2:SetPoint("BOTTOMLEFT", frame, "BOTTOMRIGHT", 6, 4)
 			name:ClearAllPoints()
 			name:SetPoint("BOTTOMLEFT", bar, "TOPLEFT", 0, 3)
 			name:SetFont("Interface\\AddOns\\GUIS-gUI\\media\\fonts\\PT Sans Narrow Bold.ttf", 12, "OUTLINE")
@@ -42,8 +43,7 @@
 			timer:ClearAllPoints()
 			timer:SetPoint("BOTTOMRIGHT", bar, "TOPRIGHT", 0, 3)  
 			timer:SetJustifyH"RIGHT"
-			timer:SetFont("Interface\\AddOns\\GUIS-gUI\\media\\fonts\\PT Sans Narrow Bold.ttf", 10, "OUTLINE") 
-			timer:SetFont("Interface\\AddOns\\GUIS-gUI\\media\\fonts\\PT Sans Narrow Bold.ttf", 10, "OUTLINE") 
+			timer:SetFont("Interface\\AddOns\\GUIS-gUI\\media\\fonts\\PT Sans Narrow Bold.ttf", 12, "OUTLINE") 
 			timer:SetShadowColor(0, 0, 0, 0)
 			spark:SetAlpha(1)
 			spark:SetHeight(30)
@@ -53,6 +53,7 @@
 			texture.SetTexture = function() end
 			timer.SetFont = function() end
 			spark.SetAlpha = function() end
+			
 
 			-- BACKDROP AND BORDER					
 			local bg = CreateFrame("Frame", nil, bar)
@@ -61,6 +62,17 @@
 			bg:SetPoint("BOTTOMRIGHT", bar, "BOTTOMRIGHT", 1, -1)
 			bg:SetFrameLevel(1)
 			F.GlossAndShade(bar)
+			
+			-- OPTIONS AND MISC
+			DBM_SavedOptions.Enabled=true
+
+			DBT_SavedOptions["DBM"].Scale = 1
+			DBT_SavedOptions["DBM"].HugeScale = 1
+			DBT_SavedOptions["DBM"].HugeWidth = 183
+			DBT_SavedOptions["DBM"].BarXOffset = 0
+			DBT_SavedOptions["DBM"].BarYOffset = 10
+			--DBT_SavedOptions["DBM"].Texture = "KkthnxTex"
+			--DBT_SavedOptions["DBM"].Font = "Semplice Regular"	
 			
 			-- LEFT ICON
 		if lefticon then

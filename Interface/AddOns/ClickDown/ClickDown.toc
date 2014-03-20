@@ -1,0 +1,10 @@
+## Interface: 50400
+## Title: ClickDown
+## Notes: Default action buttons are now fired on mouse down click instead of release (For Default UI and Minimainbar).
+## Author: asilva, Andromerius
+## Version: 1.4
+## SavedVariables: ClickDownDB
+## X-Email: andromerius@silentfury.org
+
+libs.xml
+ClickDown.lua

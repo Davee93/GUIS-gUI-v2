@@ -162,8 +162,6 @@ module.OnInit = function(self)
 		GuildFrameTab4:SetUITemplate("tab", true)
 		GuildFrameTab5:SetUITemplate("tab", true)
 		
-		--GuildMemberRankDropdownText:Kill() -- why did I do this...?
-		
 		--------------------------------------------------------------------------------------------------
 		--		Guild Level TODO: fix this stuff, make it update
 		--------------------------------------------------------------------------------------------------		

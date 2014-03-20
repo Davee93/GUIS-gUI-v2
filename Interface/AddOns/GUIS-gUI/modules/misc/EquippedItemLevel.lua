@@ -1,3 +1,10 @@
+-- gUI API 
+local GUIS = LibStub("gCore-3.0"):GetModule("GUIS-gUI: Core")
+local M = LibStub("gMedia-3.0")
+local C = LibStub("gDB-1.0"):GetDataBase("GUIS-gUI: Colors")
+local F = LibStub("gDB-1.0"):GetDataBase("GUIS-gUI: Functions")
+local RegisterCallback = function(...) return module:RegisterCallback(...) end
+
 -- decimal places of the equipped average item level. to assign '2' will show it like '123.45'
 local DECIMAL_PLACES = 0
 

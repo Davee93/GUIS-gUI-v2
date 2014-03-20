@@ -1214,11 +1214,11 @@ Style = function(f)
 	f.health:SetUIShadowColor(C["shadow"][1], C["shadow"][2], C["shadow"][3], 1)
 	f.health:SetScale(f.scale)
 
-	f.health.Shade = f.health:CreateTexture()
+	--[[f.health.Shade = f.health:CreateTexture()
 	f.health.Shade:SetDrawLayer("OVERLAY", 1)
 	f.health.Shade:SetTexture(M["Button"]["Shade"])
 	f.health.Shade:SetVertexColor(0, 0, 0, 1/5)
-	f.health.Shade:SetAllPoints(f.health)
+	f.health.Shade:SetAllPoints(f.health)]]
 
 	f.health.Gloss = f.health:CreateTexture()
 	f.health.Gloss:SetDrawLayer("OVERLAY", 2)

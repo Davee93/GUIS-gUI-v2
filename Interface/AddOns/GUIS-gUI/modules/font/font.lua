@@ -150,33 +150,33 @@ SetBlizzFonts = function(self)
 		number = localizedFonts[gameLocale].number
 		damage = localizedFonts[gameLocale].damage
 
-		SetFont(CombatTextFont, damage, nil, "THINOUTLINE", 1.25, -1.25)
-		SetFont(SubZoneTextFont, number, nil, "THINOUTLINE", 2.25, -2.25)
-		SetFont(PVPInfoTextFont, number, nil, "THINOUTLINE", 2.25, -2.25)
-		SetFont(ZoneTextFont, number, nil, "THINOUTLINE", 2.25, -2.25)
+		SetFont(CombatTextFont, damage, nil, "THINOUTLINE", 0, 0)
+		SetFont(SubZoneTextFont, number, nil, "THINOUTLINE", 0, 0)
+		SetFont(PVPInfoTextFont, number, nil, "THINOUTLINE", 0, 0)
+		SetFont(ZoneTextFont, number, nil, "THINOUTLINE", 0, 0)
 		
 	else
 		text = M["Font"]["PT Sans Narrow Bold"] -- Waukegan LDO
 		number = M["Font"]["Big Noodle Titling"]
-		damage = M["Font"]["TrashHand"] -- Righteous Kill Condensed
+		damage = M["Font"]["TrashHand"] -- Righteous Kill Condensed 
 
 		UIDROPDOWNMENU_DEFAULT_TEXT_HEIGHT = 12
 		CHAT_FONT_HEIGHTS = { 12, 13, 14, 15, 16, 17, 18, 19, 20 }
 
 		-- on-screen combat font, make it huge for clarity, if that even works (max is 32, isn't it...?)
-		SetFont(CombatTextFont, damage, 100, "OUTLINE", 1.25, -1.25)
+		SetFont(CombatTextFont, text, 100, "OUTLINE", 0, 0)
 		
 		-- on-screen zone and subzone names
-		SetFont(SubZoneTextFont, number, 28, "OUTLINE", 2.25, -2.25) 
-		SetFont(PVPInfoTextFont, number, 18, "OUTLINE", 2.25, -2.25) 
-		SetFont(ZoneTextFont, number, 32, "OUTLINE", 2.25, -2.25)
-		SetFont(PVPArenaTextString, number, 22, "OUTLINE", 2.25, -2.25) 
+		SetFont(SubZoneTextFont, number, 28, "THINOUTLINE", 0, 0)
+		SetFont(PVPInfoTextFont, number, 18, "THINOUTLINE", 0, 0)
+		SetFont(ZoneTextFont, number, 32, "THINOUTLINE", 0, 0)
+		SetFont(PVPArenaTextString, number, 22, "THINOUTLINE", 0, 0)
 
 		-- on-screen stuff that bugs me. using the number/unitframe font for consistency
-		SetFont(RaidWarningFrameSlot1, number, nil, "THINOUTLINE", 2.25, -2.25)
-		SetFont(RaidWarningFrameSlot2, number, nil, "THINOUTLINE", 2.25, -2.25)
-		SetFont(RaidBossEmoteFrameSlot1, number, nil, "THINOUTLINE", 2.25, -2.25)
-		SetFont(RaidBossEmoteFrameSlot2, number, nil, "THINOUTLINE", 2.25, -2.25)
+		SetFont(RaidWarningFrameSlot1, number, nil, "THINOUTLINE", 0, 0)
+		SetFont(RaidWarningFrameSlot2, number, nil, "THINOUTLINE", 0, 0)
+		SetFont(RaidBossEmoteFrameSlot1, number, nil, "THINOUTLINE", 0, 0)
+		SetFont(RaidBossEmoteFrameSlot2, number, nil, "THINOUTLINE", 0, 0)
 		
 		-- system fonts
 		SetFont(FriendsFont_Normal, text, 12)
@@ -191,7 +191,7 @@ SetBlizzFonts = function(self)
 		SetFont(SystemFont_Large, text, 13) -- Testing #1
 		SetFont(SystemFont_Med1, text, 12)
 		SetFont(SystemFont_Med3, text, 12) -- Testing #2
-		SetFont(SystemFont_OutlineThick_Huge2, text, 20, "THICKOUTLINE")
+		SetFont(SystemFont_OutlineThick_Huge2, text, 20, "THINOUTLINE")
 		SetFont(SystemFont_Outline_Small, NUMBER, 12, "OUTLINE")
 		SetFont(SystemFont_Shadow_Huge1, text, 20, "THINOUTLINE")
 		SetFont(SystemFont_Shadow_Large, text, 15)
@@ -212,7 +212,7 @@ SetBlizzFonts = function(self)
 		SetFont(NumberFontNormalLarge, number)
 		SetFont(NumberFontNormalSmallGray, number)
 		SetFont(NumberFont_OutlineThick_Mono_Small, number, 12, "OUTLINE")
-		SetFont(NumberFont_Outline_Huge, number, 28, "THICKOUTLINE")
+		SetFont(NumberFont_Outline_Huge, number, 28, "THINOUTLINE")
 		SetFont(NumberFont_Outline_Large, number, 15, "OUTLINE")
 		SetFont(NumberFont_Outline_Med, number, 13, "OUTLINE")
 		

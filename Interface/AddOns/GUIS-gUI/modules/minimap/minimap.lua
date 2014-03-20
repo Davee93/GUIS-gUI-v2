@@ -586,14 +586,6 @@ updateMinimapIcons = function()
 end
 
 module.UpdateAll = function(self)
-	if (GUIS_DB.minimap.showCoordinates) then
-		insets.mail.Y = 16
-		Minimap.Coordinates:Show()
-	else
-		insets.mail.Y = 2
-		Minimap.Coordinates:Hide()
-	end
-
 	if (GUIS_DB.minimap.showClock) then
 		TimeManagerClockButton:Show()
 	else
@@ -831,18 +823,6 @@ module.OnInit = function(self)
 		Minimap.InstanceDifficulty:SetPoint("CENTER", Minimap, "CENTER", 0, 0)
 	end
 	
-	-- 
-	-- add player coordinates
-	do
-		Minimap.Coordinates = Minimap:CreateFontString(nil, "OVERLAY")
-		Minimap.Coordinates:SetFontObject(GUIS_SystemFontSmall)
-		Minimap.Coordinates:SetJustifyH("CENTER")
-		Minimap.Coordinates:SetTextColor(unpack(C["value"]))
-		Minimap.Coordinates:SetPoint("BOTTOM", Minimap, "BOTTOM", 0, 2)
-		
-		ScheduleTimer(UpdateCoordinates, 0.1, nil, nil)
-	end
-
 	--
 	-- add our middleclick menu
 	do
